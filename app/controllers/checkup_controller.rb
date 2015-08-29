@@ -4,6 +4,13 @@ class CheckupController < ApplicationController
   end
 
   def charts_category
+		case params[:category]
+		when "pain"
+			@category = "통증차트"
+		when "internal"
+			@category = "내과차트"
+		end
+		@charts = Chart.where(category: @category)
   end
 
   def show
