@@ -4,10 +4,4 @@
 
 <hr>
 
-<% @charts.reverse.each do |chart| %>
-<div style="border: 1px solid #ffffff">
-	<h4><%= chart.name %></h4>
-	<p style="color: #ff0000"><%= chart.category %></p>
-	<p><%= chart.timestamps %></p>
-</div>
-<% end %>
+<%= render :partial => "checkup/charts" %>

@@ -1,14 +1,14 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>KMD CHART::언제 어디서든 차트를 작성할 수 있습니다.</title>
+  <title>KMD CHART::언제 어디서나 차트를 작성할 수 있습니다.</title>
   <%= stylesheet_link_tag    "application", media: "all", "data-turbolinks-track" => true %>
   <%= javascript_include_tag "application", "data-turbolinks-track" => true %>
   <%= csrf_meta_tags %>
 </head>
 <body>
 
-<h4><a href="/">KMD CHART</a> || <a href="/pain">통증차트</a> | <a href="/internal">내과차트</a></h4>
+<%= render :partial => "layouts/header" %>
 
 <%= yield %>
 
