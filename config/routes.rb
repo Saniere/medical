@@ -1,7 +1,7 @@
 Medical::Application.routes.draw do
   root "checkup#charts_mine"
   get "/:category" => 'checkup#charts_category'
-  get "checkup/show"
+  get "checkup/show/:id" => 'checkup#show'
   get "checkup/write1"
   get "checkup/write2"
   get "checkup/write3"

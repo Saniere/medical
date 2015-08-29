@@ -14,6 +14,7 @@ class CheckupController < ApplicationController
   end
 
   def show
+		@chart = Chart.find(params[:id])
   end
 
   def write1

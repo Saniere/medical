@@ -1,2 +1,26 @@
-<h1>Checkup#show</h1>
-<p>Find me in app/views/checkup/show.html.erb</p>
+<p><%= flash[:alert] %></p>
+<h2>차트 보기</h2>
+
+<div style="border:1px solid #ffffff">
+	<h4>환자 성명 : <%= @chart.name %></h4>
+	<p style="color: #ff0000">분류 : <%= @chart.category %></p>
+	<p>주소증 : <%= @chart.main_symptom %></p>
+	<p>발병일 : <%= @chart.onset %></p>
+	<p>악화/완화요인 : <%= @chart.provoke %></p>
+	<p>통증양상 : <%= @chart.quality %></p>
+	<p>방사통 : <%= @chart.radiation %></p>
+	<p>VAS Scale : <%= @chart.severe %></p>
+	<p>지속시간 : <%= @chart.time %></p>
+	<p>통증 부위 : <%= @chart.pain_area %></p>
+<!--  통증 부위에 따른 이학적 검사 결과 표시 위치
+	<p>테스트1 : < @chart.부위_테스트1 %></p>
+	<p></p>
+	<p></p>
+	<p></p>
+	<p></p>
+이학적 검사 결과 표시 끝 -->
+	<p>진단 : <%= @chart.diagnose %></p>
+	<p>치료 계획 : <%= @chart.plan %></p>
+
+	<p><a href="/">전체 차트 리스트 보기</a></p>
+</div>
