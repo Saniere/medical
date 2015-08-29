@@ -15,7 +15,7 @@ class CreateCharts < ActiveRecord::Migration
 			t.text		:diagnose
 			t.text		:plan
 
-      t.timestamps
+      t.timestamps	:timestamps
     end
   end
 end

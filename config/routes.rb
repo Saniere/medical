@@ -1,4 +1,14 @@
 Medical::Application.routes.draw do
+  root "checkup#charts_mine"
+  get "checkup/charts_category"
+  get "checkup/show"
+  get "checkup/write1"
+  get "checkup/write2"
+  get "checkup/write3"
+  get "checkup/write_complete"
+  get "checkup/edit"
+  get "checkup/edit_complete"
+  get "checkup/delete_complete"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
