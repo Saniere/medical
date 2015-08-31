@@ -3,7 +3,8 @@ Medical::Application.routes.draw do
   get "/:category" => 'checkup#charts_category'
   get "checkup/show/:id" => 'checkup#show'
   get "checkup/write1"
-  get "checkup/write2"
+	post "checkup/write1_complete"
+  get "checkup/write2/:id" => 'checkup#write2' 
   get "checkup/write3"
   get "checkup/write_complete"
   get "checkup/edit"

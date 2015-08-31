@@ -1,2 +1,22 @@
-<h1>Checkup#write2</h1>
-<p>Find me in app/views/checkup/write2.html.erb</p>
+<p><%= flash[:alert] %></p>
+<h2>이전 단계에서 작성한 내용입니다.</h2>
+
+<div style="border:1px solid #ffffff">
+	<h4>환자 성명 : <%= @chart.name %></h4>
+	<p style="color: #ff0000">분류 : <%= @chart.category %></p>
+	<p>주소증 : <%= @chart.main_symptom %></p>
+	<p>발병일 : <%= @chart.onset %></p>
+	<p>악화/완화요인 : <%= @chart.provoke %></p>
+	<p>통증양상 : <%= @chart.quality %></p>
+	<p>방사통 : <%= @chart.radiation %></p>
+	<p>VAS Scale : <%= @chart.severe %></p>
+	<p>지속시간 : <%= @chart.time %></p>
+	<p>통증 부위 : <%= @chart.pain_area %></p>
+
+<hr>
+
+<h2>차트 작성하기 2단계</h2>
+
+<form action="/checkup/write2_complete" method="post">
+	<p></p>
+</form>

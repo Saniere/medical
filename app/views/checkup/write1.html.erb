@@ -1,2 +1,21 @@
-<h1>Checkup#write1</h1>
-<p>Find me in app/views/checkup/write1.html.erb</p>
+<p><%= flash[:alert] %></p>
+<h2>새로운 차트 작성하기</h2>
+
+<form action="/checkup/write1_complete" method="post">
+	<p style="color: #ff0000">분류 : 
+	<select name="category">
+		<option value="통증차트">"통증차트"</option>
+		<option value="내과차트">"내과차트"</option>
+	</select></p>
+	<p>환자 성명 : <input type="text" name="name" placeholder="환자 성명을 입력하세요."></p>
+	<p>주소증 : <textarea name="main_symptom" placeholder="주소증을 입력하세요."></textarea></p>
+	<p>발병일 : <textarea name="onset" placeholder="예) 1주일 전부터"></textarea></p>
+	<p>악화/완화요인 : <textarea name="provoke" placeholder="예) 가만히 누워있으면 통증이 덜하다"></textarea></p>
+	<p>통증양상 : <textarea name="quality" placeholder="예) 칼로 쑤시는 듯 아프다"></textarea></p>
+	<p>방사통 : <textarea name="radiation" placeholder="예) 다리를 타고 퍼진다"></textarea></p>
+	<p>VAS Scale : <textarea name="severe" placeholder="통증의 정도를 1에서 10사이의 숫자로 표현하세요."></textarea></p>
+	<p>지속시간 : <textarea name="time" placeholder="통증이 지속되는 시간"></textarea></p>
+<!--	<p>통증 부위 : <select name="pain_area"></p> -->
+
+	<input type="submit" value="다음 단계로">
+</form>

@@ -17,11 +17,36 @@ class CheckupController < ApplicationController
 		@chart = Chart.find(params[:id])
   end
 
-  def write1
+	def write1
+	end
+
+  def write1_complete
+		c = Chart.new
+		c.category = params[:category]
+		c.name = params[:name]
+		c.main_symptom = params[:main_symptom]
+		c.onset = params[:onset]
+		c.provoke = params[:provoke]
+		c.quality = params[:quality]
+		c.radiation = params[:radiation]
+		c.severe = params[:severe]
+		c.time = params[:time]
+		#c.pain_area = [:pain_area]
+		if c.save
+			flash[:alert] = "이전 단계가 정상적으로 작성되었습니다."
+			redirect_to "/checkup/write2/#{c.id}"
+		else
+			flash[:alert] = c.errors.values.flatten.join(' ')
+			redirect_to :back
+		end
   end
 
   def write2
+		@chart = Chart.find(params[:id])
   end
+
+	def write2_complete
+	end
 
   def write3
   end
