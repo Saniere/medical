@@ -1,4 +1,7 @@
 class CheckupController < ApplicationController
+	before_action :login_check
+	skip_before_action :login_check, :only => [:charts_mine, :charts_category, :show]
+
   def charts_mine
 		@charts = Chart.all
   end
