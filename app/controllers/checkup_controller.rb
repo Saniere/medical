@@ -31,7 +31,7 @@ class CheckupController < ApplicationController
 		c.radiation = params[:radiation]
 		c.severe = params[:severe]
 		c.time = params[:time]
-		#c.pain_area = [:pain_area]
+		c.pain_area = params[:pain_area]
 		if c.save
 			flash[:alert] = "이전 단계가 정상적으로 작성되었습니다."
 			redirect_to "/checkup/write2/#{c.id}"
@@ -46,6 +46,14 @@ class CheckupController < ApplicationController
   end
 
 	def write2_complete
+		#c = 
+		#if c.save
+		#	flash[:alert] = "2단계가 정상적으로 작성되었습니다."
+		#	redirect_to "/checkup/write3/#{c.id}"
+		else
+		#	flash[:alert] = c.errors.values.flatten.join(' ')
+		#	redirect_to :back
+		#end
 	end
 
   def write3

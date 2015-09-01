@@ -13,9 +13,42 @@
 	<p>악화/완화요인 : <textarea name="provoke" placeholder="예) 가만히 누워있으면 통증이 덜하다"></textarea></p>
 	<p>통증양상 : <textarea name="quality" placeholder="예) 칼로 쑤시는 듯 아프다"></textarea></p>
 	<p>방사통 : <textarea name="radiation" placeholder="예) 다리를 타고 퍼진다"></textarea></p>
-	<p>VAS Scale : <textarea name="severe" placeholder="통증의 정도를 1에서 10사이의 숫자로 표현하세요."></textarea></p>
+	<p>VAS Scale : <input type="number" name="severe" min="1" max="10" step="1" value="5"> 통증의 정도를 1-10사이의 숫자로 표현하세요.</p>
 	<p>지속시간 : <textarea name="time" placeholder="통증이 지속되는 시간"></textarea></p>
-<!--	<p>통증 부위 : <select name="pain_area"></p> -->
+<!-- 체크박스 name설정 어떻게함?
+	<p>통증 부위 :
+	<br>
+	<input type="checkbox" name="pain_area" value="두경부">두경부
+	<br>
+	<input type="checkbox" name="pain_area" value="견갑상완">견갑상완
+	<br>
+	<input type="checkbox" name="pain_area" value="전완수부">전완수부
+	<br>
+	<input type="checkbox" name="pain_area" value="흉복부">흉복부
+	<br>
+	<input type="checkbox" name="pain_area" value="요둔부">요둔부
+	<br>
+	<input type="checkbox" name="pain_area" value="고관절대퇴부">고관절대퇴부
+	<br>
+	<input type="checkbox" name="pain_area" value="하지족관절">하지족관절
+</p>
+-->
+	<p>통증 부위 :
+	<br>
+	<input type="radio" name="pain_area" value="두경부">두경부
+	<br>
+	<input type="radio" name="pain_area" value="견갑상완">견갑상완
+	<br>
+	<input type="radio" name="pain_area" value="전완수부">전완수부
+	<br>
+	<input type="radio" name="pain_area" value="흉복부">흉복부
+	<br>
+	<input type="radio" name="pain_area" value="요둔부">요둔부
+	<br>
+	<input type="radio" name="pain_area" value="고관절대퇴부">고관절대퇴부
+	<br>
+	<input type="radio" name="pain_area" value="하지족관절">하지족관절
+</p>
 
-	<input type="submit" value="다음 단계로">
+	<input type="submit" value="다음 단계로(1/3)">
 </form>

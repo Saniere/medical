@@ -1,10 +1,16 @@
 Medical::Application.routes.draw do
+  get "users/signup"
+  post "users/signup_complete"
+  get "users/login"
+  get "users/login_complete"
+  get "users/logout_complete"
   root "checkup#charts_mine"
   get "/:category" => 'checkup#charts_category'
   get "checkup/show/:id" => 'checkup#show'
   get "checkup/write1"
 	post "checkup/write1_complete"
   get "checkup/write2/:id" => 'checkup#write2' 
+	post "checkup/write2_complete"
   get "checkup/write3"
   get "checkup/write_complete"
   get "checkup/edit"
