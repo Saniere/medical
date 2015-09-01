@@ -25,6 +25,7 @@ class CheckupController < ApplicationController
 
   def write1_complete
 		c = Chart.new
+		c.user_id = session[:user_id]
 		c.category = params[:category]
 		c.name = params[:name]
 		c.main_symptom = params[:main_symptom]
