@@ -2,7 +2,7 @@ Medical::Application.routes.draw do
   get "users/signup"
   post "users/signup_complete"
   get "users/login"
-  get "users/login_complete"
+  post "users/login_complete"
   get "users/logout_complete"
   root "checkup#charts_mine"
   get "/:category" => 'checkup#charts_category'
