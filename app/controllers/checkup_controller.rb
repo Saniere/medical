@@ -46,7 +46,7 @@ class CheckupController < ApplicationController
 
   def write2
 		@chart = Chart.find(params[:id])
-		@tests = Test.where(pain_area: params[:pain_area])[0]
+		@tests = Test.where(pain_area: @chart.pain_area)
   end
 
 	def write2_complete

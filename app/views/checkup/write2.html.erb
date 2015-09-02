@@ -20,12 +20,14 @@
 <form action="/checkup/write2_complete" method="post">
 	<p>1단계에서 선택한 통증 부위에 따른 이학적 검사를 시작합니다.</p>
 	<% @tests.each do |test| %>
-	Test : <%= @test.name %>
-	Method : <%= @test.method %>
-	Mean : <%= @test.mean %>
-	<input type="radio" name="test_result" value="양성">양성
-	<input type="radio" name="test_result" value="음성">음성
-	<br>
+	<div>
+		<p>Test : <%= test.name %></p>
+		<p>Method : <%= test.method %></p>
+		<p>Mean : <%= test.mean %></p>
+		<input type="radio" name="test_result" value="양성">양성
+		<input type="radio" name="test_result" value="음성">음성
+		<br>
+	</div>
 	<% end %>
 
 	<input type="submit" value="다음 단계로(2/3)">
