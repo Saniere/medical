@@ -18,3 +18,16 @@ categories.each do |category|
 		c.save
 	end
 end
+
+pain_areas = ["두경부", "견갑상완부", "전완수부", "흉복부", "요둔부", "고관절대퇴부", "하지족관절부"]
+
+pain_areas.each do |pain_area|
+	1.upto(5) do |i|
+		t = Test.new
+		t.pain_area = pain_area
+		t.name = "#{pain_area}테스트#{i}"
+		t.method = "#{pain_area}테스트#{i}의 수행방법"
+		t.mean = "#{pain_area}테스트#{i}의 의미"
+		t.save
+	end
+end

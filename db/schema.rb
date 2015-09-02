@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150829123421) do
+ActiveRecord::Schema.define(version: 20150902094051) do
 
   create_table "charts", force: true do |t|
     t.integer  "user_id"
@@ -25,8 +25,18 @@ ActiveRecord::Schema.define(version: 20150829123421) do
     t.integer  "severe"
     t.text     "time"
     t.string   "pain_area"
+    t.string   "test_result"
     t.text     "diagnose"
     t.text     "plan"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "tests", force: true do |t|
+    t.string   "pain_area"
+    t.string   "name"
+    t.text     "method"
+    t.text     "mean"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

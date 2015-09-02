@@ -12,6 +12,7 @@ class CreateCharts < ActiveRecord::Migration
 			t.integer	:severe
 			t.text		:time
 			t.string	:pain_area
+			t.string	:test_result
 			t.text		:diagnose
 			t.text		:plan
 
